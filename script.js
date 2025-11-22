@@ -85,6 +85,18 @@ window.addEventListener("scroll", () => {
 
 // Marketplace Category Filtering
 document.addEventListener("DOMContentLoaded", () => {
+  // Protect marketplace page - redirect to home if not logged in
+  if (window.location.pathname.includes("marketplace.html")) {
+    const session =
+      localStorage.getItem("agriConnectSession") ||
+      sessionStorage.getItem("agriConnectSession");
+    if (!session) {
+      alert("Please login or create an account to access the marketplace.");
+      window.location.href = "index.html";
+      return;
+    }
+  }
+
   // Get category and search from URL parameters
   const urlParams = new URLSearchParams(window.location.search);
   const category = urlParams.get("category");
@@ -122,6 +134,55 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update active state
       filterTags.forEach((t) => t.classList.remove("active"));
       tag.classList.add("active");
+    });
+  });
+
+  // Protect marketplace links - show login prompt if not authenticated
+  const marketplaceLinks = document.querySelectorAll(
+    'a[href*="marketplace"], button[onclick*="marketplace"]'
+  );
+  marketplaceLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const session =
+        localStorage.getItem("agriConnectSession") ||
+        sessionStorage.getItem("agriConnectSession");
+      if (!session) {
+        e.preventDefault();
+        e.stopPropagation();
+        alert("Please login or create an account to access the marketplace.");
+        // Show login modal
+        const loginModal = document.getElementById("loginModal");
+        if (loginModal) {
+          loginModal.style.display = "flex";
+        }
+      }
+    });
+  });
+
+  // Protect marketplace preview CTA buttons
+  const marketplaceCtaButtons = document.querySelectorAll(
+    ".marketplace-cta-btn"
+  );
+  marketplaceCtaButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const session =
+        localStorage.getItem("agriConnectSession") ||
+        sessionStorage.getItem("agriConnectSession");
+      if (!session) {
+        e.preventDefault();
+        alert("Please login or create an account to access the marketplace.");
+        // Show login modal
+        const loginModal = document.getElementById("loginModal");
+        if (loginModal) {
+          loginModal.style.display = "flex";
+        }
+      } else {
+        // User is authenticated, navigate to marketplace
+        const href = button.getAttribute("data-href");
+        if (href) {
+          window.location.href = href;
+        }
+      }
     });
   });
 });

@@ -72,8 +72,8 @@
 
           <div class="hero-buttons animate-slide-up-delay">
             <button
-              class="btn btn-primary btn-hover"
-              onclick="window.location.href='marketplace.html'"
+              class="btn btn-primary btn-hover marketplace-cta-btn"
+              data-href="marketplace.html"
             >
               Shop Now
             </button>
@@ -261,33 +261,9 @@
             onclick="window.location.href='marketplace.html?category=grains'"
           >
             <div class="category-icon">🌾</div>
-            <h3>Grains & Cereals</h3>
-            <p>Rice, Wheat, Corn, Barley</p>
+            <h3>Cereals / Grains</h3>
+            <p>Maize, Millet, Rice, Sorghum, Wheat</p>
             <a href="marketplace.html?category=grains" class="category-link"
-              >View Products →</a
-            >
-          </div>
-
-          <div
-            class="category-card"
-            onclick="window.location.href='marketplace.html?category=vegetables'"
-          >
-            <div class="category-icon">🥕</div>
-            <h3>Vegetables</h3>
-            <p>Tomatoes, Carrots, Lettuce, Peppers</p>
-            <a href="marketplace.html?category=vegetables" class="category-link"
-              >View Products →</a
-            >
-          </div>
-
-          <div
-            class="category-card"
-            onclick="window.location.href='marketplace.html?category=fruits'"
-          >
-            <div class="category-icon">🍎</div>
-            <h3>Fruits</h3>
-            <p>Apples, Oranges, Berries, Bananas</p>
-            <a href="marketplace.html?category=fruits" class="category-link"
               >View Products →</a
             >
           </div>
@@ -297,8 +273,8 @@
             onclick="window.location.href='marketplace.html?category=legumes'"
           >
             <div class="category-icon">🫘</div>
-            <h3>Legumes</h3>
-            <p>Beans, Peas, Lentils, Chickpeas</p>
+            <h3>Legumes / Pulses</h3>
+            <p>Beans, Soybean, Groundnut</p>
             <a href="marketplace.html?category=legumes" class="category-link"
               >View Products →</a
             >
@@ -308,22 +284,10 @@
             class="category-card"
             onclick="window.location.href='marketplace.html?category=roots'"
           >
-            <div class="category-icon">🥔</div>
-            <h3>Root Crops</h3>
-            <p>Potatoes, Sweet Potatoes, Cassava</p>
+            <div class="category-icon">🍠</div>
+            <h3>Root & Tuber Crops</h3>
+            <p>Cassava, Yam</p>
             <a href="marketplace.html?category=roots" class="category-link"
-              >View Products →</a
-            >
-          </div>
-
-          <div
-            class="category-card"
-            onclick="window.location.href='marketplace.html?category=herbs'"
-          >
-            <div class="category-icon">🌿</div>
-            <h3>Herbs & Spices</h3>
-            <p>Basil, Cilantro, Ginger, Turmeric</p>
-            <a href="marketplace.html?category=herbs" class="category-link"
               >View Products →</a
             >
           </div>
@@ -366,12 +330,15 @@
 
             <div class="marketplace-cta-buttons">
               <button
-                class="btn btn-primary btn-large btn-hover"
-                onclick="window.location.href='marketplace.html'"
+                class="btn btn-primary btn-large btn-hover marketplace-cta-btn"
+                data-href="marketplace.html"
               >
                 Start Shopping
               </button>
-              <button class="btn btn-secondary btn-large btn-hover">
+              <button
+                class="btn btn-secondary btn-large btn-hover marketplace-cta-btn"
+                data-href="marketplace.html"
+              >
                 View All Products
               </button>
             </div>
