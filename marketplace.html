@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace - AgriConnect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <span class="logo">🌾</span>
+          <span class="brand-name">AgriConnect</span>
+        </div>
+        <div class="nav-search">
+          <input
+            type="text"
+            placeholder="Search crops..."
+            class="nav-search-input"
+            id="navSearchInput"
+          />
+          <button class="nav-search-btn" id="navSearchBtn">🔍</button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="marketplace.html" class="active">Marketplace</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-auth">
+          <button class="btn-auth btn-auth-primary" id="loginBtn">Login</button>
+          <div class="user-menu" id="userMenu" style="display: none">
+            <span class="user-name" id="userName"></span>
+            <button class="btn-auth" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Marketplace Hero -->
+    <section class="marketplace-hero">
+      <div class="container">
+        <h1 class="hero-title">Fresh Crops Marketplace</h1>
+        <p class="hero-subtitle">
+          Shop fresh crops from local farmers. Get the best quality produce
+          delivered to your doorstep at competitive prices.
+        </p>
+      </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="marketplace-search">
+      <div class="container">
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search for crops, vegetables, fruits..."
+            class="search-input"
+          />
+          <button class="btn btn-primary">Search</button>
+        </div>
+
+        <div class="filter-tags">
+          <button class="filter-tag active">All Crops</button>
+          <button class="filter-tag">Grains</button>
+          <button class="filter-tag">Vegetables</button>
+          <button class="filter-tag">Fruits</button>
+          <button class="filter-tag">Legumes</button>
+          <button class="filter-tag">Herbs</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="marketplace-products">
+      <div class="container">
+        <h2 class="section-title">Fresh Crops Available Now</h2>
+
+        <div class="products-grid">
+          <div class="product-card" data-category="grains">
+            <div class="product-image">
+              <span class="product-placeholder">🌽</span>
+            </div>
+            <div class="product-info">
+              <h3>Fresh Corn</h3>
+              <p class="product-description">
+                Sweet, organic corn harvested this morning. Perfect for
+                grilling.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 John's Farm</span>
+                <span class="location">📍 Iowa</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$3.50/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vegetables">
+            <div class="product-image">
+              <span class="product-placeholder">🍅</span>
+            </div>
+            <div class="product-info">
+              <h3>Organic Tomatoes</h3>
+              <p class="product-description">
+                Vine-ripened organic tomatoes, rich in flavor and nutrients.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Green Valley Farm</span>
+                <span class="location">📍 California</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$4.20/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vegetables">
+            <div class="product-image">
+              <span class="product-placeholder">🥬</span>
+            </div>
+            <div class="product-info">
+              <h3>Fresh Lettuce</h3>
+              <p class="product-description">
+                Crispy, hydroponic lettuce grown without pesticides.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Sunrise Gardens</span>
+                <span class="location">📍 Oregon</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$2.80/head</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="roots">
+            <div class="product-image">
+              <span class="product-placeholder">🥔</span>
+            </div>
+            <div class="product-info">
+              <h3>Farm Potatoes</h3>
+              <p class="product-description">
+                Fresh potatoes, perfect for any dish. Straight from the soil.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Heritage Farms</span>
+                <span class="location">📍 Idaho</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$1.50/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="vegetables">
+            <div class="product-image">
+              <span class="product-placeholder">🥕</span>
+            </div>
+            <div class="product-info">
+              <h3>Organic Carrots</h3>
+              <p class="product-description">
+                Sweet, crunchy carrots grown in nutrient-rich soil.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Harvest Moon Farm</span>
+                <span class="location">📍 Vermont</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$2.90/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="grains">
+            <div class="product-image">
+              <span class="product-placeholder">🌾</span>
+            </div>
+            <div class="product-info">
+              <h3>Premium Rice</h3>
+              <p class="product-description">
+                Long-grain white rice, perfect texture and aroma.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Rice Valley Co-op</span>
+                <span class="location">📍 Arkansas</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$5.50/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional products -->
+          <div class="product-card" data-category="fruits">
+            <div class="product-image">
+              <span class="product-placeholder">🍎</span>
+            </div>
+            <div class="product-info">
+              <h3>Fresh Apples</h3>
+              <p class="product-description">
+                Crisp, juicy apples perfect for snacking or baking.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Orchard Hills</span>
+                <span class="location">📍 Washington</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$3.20/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="fruits">
+            <div class="product-image">
+              <span class="product-placeholder">🍌</span>
+            </div>
+            <div class="product-info">
+              <h3>Organic Bananas</h3>
+              <p class="product-description">
+                Naturally ripened bananas, rich in potassium and nutrients.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Tropical Farms</span>
+                <span class="location">📍 Florida</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$2.40/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="legumes">
+            <div class="product-image">
+              <span class="product-placeholder">🫘</span>
+            </div>
+            <div class="product-info">
+              <h3>Black Beans</h3>
+              <p class="product-description">
+                High-protein black beans, perfect for soups and stews.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Bean Valley Farm</span>
+                <span class="location">📍 Nebraska</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$4.00/kg</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="herbs">
+            <div class="product-image">
+              <span class="product-placeholder">🌿</span>
+            </div>
+            <div class="product-info">
+              <h3>Fresh Basil</h3>
+              <p class="product-description">
+                Aromatic basil leaves, perfect for cooking and garnishing.
+              </p>
+              <div class="product-meta">
+                <span class="farmer-name">👨‍🌾 Herb Garden Co.</span>
+                <span class="location">📍 Colorado</span>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">$6.50/bunch</span>
+                <button class="btn btn-small btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">
+          Have questions? We'd love to hear from you. Send us a message and
+          we'll respond as soon as possible.
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-form-wrapper">
+            <form class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                    class="form-input"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  required
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                  class="form-input"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <h3>Address</h3>
+                <p>123 Farm Road, Agriculture City, AC 12345</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>support@agriconnect.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🕒</div>
+              <div class="contact-details">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="logo">🌾</span>
+            <span class="brand-name">AgriConnect</span>
+          </div>
+          <p>&copy; 2025 AgriConnect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <span class="modal-close" id="loginClose">&times;</span>
+        <h2 class="modal-title">Welcome Back!</h2>
+        <p class="modal-subtitle">Login to your account</p>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input
+              type="email"
+              id="loginEmail"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input
+              type="password"
+              id="loginPassword"
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <p class="form-footer">
+            Don't have an account?
+            <a href="#" id="switchToRegister">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+      <div class="modal-content">
+        <span class="modal-close" id="registerClose">&times;</span>
+        <h2 class="modal-title">Create Account</h2>
+        <p class="modal-subtitle">Join AgriConnect today</p>
+        <form id="registerForm" class="auth-form">
+          <div class="form-group">
+            <label for="registerName">Full Name</label>
+            <input
+              type="text"
+              id="registerName"
+              required
+              placeholder="Enter your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email Address</label>
+            <input
+              type="email"
+              id="registerEmail"
+              required
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password</label>
+            <input
+              type="password"
+              id="registerPassword"
+              required
+              placeholder="Create a password"
+              minlength="6"
+            />
+          </div>
+          <div class="form-group">
+            <label for="registerConfirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="registerConfirmPassword"
+              required
+              placeholder="Confirm your password"
+            />
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="agreeTerms" required />
+              <span>I agree to the Terms & Conditions</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Create Account
+          </button>
+          <p class="form-footer">
+            Already have an account?
+            <a href="#" id="switchToLogin">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
